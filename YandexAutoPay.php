@@ -13,7 +13,7 @@ class AutoPay {
     public static function parserMessage($message)
     {
         $patternSum = "/.*\s(\d*,\d{1,2}).*/mix";
-        $patternPass = "/.*:.*(\d{4}.*).*/mix";
+        $patternPass = "/.*(\d{4}.*).*/mix";
         $patternAcct = "/.*(41001\d{8,10}).*/mix";
 
         preg_match_all($patternSum, $message, $sum_array);
