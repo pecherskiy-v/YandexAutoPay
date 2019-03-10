@@ -1,0 +1,15 @@
+{
+    "name": "pecherskiy/yandex",
+    "description": "",
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "classmap": [
+            "Pecherskiy/"
+        ],
+        "psr-4": {
+            "Pecherskiy\\": "./"
+        }
+    }
+}

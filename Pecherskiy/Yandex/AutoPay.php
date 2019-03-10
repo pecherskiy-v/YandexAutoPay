@@ -1,8 +1,9 @@
 <?php
 
-namespace PecherskiyV\Yandex;
+namespace Pecherskiy\Yandex;
 
-class AutoPay {
+class AutoPay
+{
     /* ------------------ Parser Message ------------------
      * на входе получаем текст смс
      * на выходе массив:
@@ -20,14 +21,14 @@ class AutoPay {
         preg_match_all($patternPass, $message, $pass_array);
         preg_match_all($patternAcct, $message, $acct_array);
 
-        if(!isset($pass_array[1][0]) || !isset($sum_array[1][0]) || !isset($acct_array[1][0])){
+        if (!isset($pass_array[1][0]) || !isset($sum_array[1][0]) || !isset($acct_array[1][0])) {
             return ['error' => $message];
         }
 
-        return array(
+        return [
             'pass' => $pass_array[1][0],
             'sum' => $sum_array[1][0],
             'acct' => $acct_array[1][0],
-        );
+        ];
     }
 }
