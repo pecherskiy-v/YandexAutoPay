@@ -25,14 +25,14 @@ class YandexAutoPayTest extends TestCase
     }
 
     /**
-     * @dataProvider providerPower
+     * @dataProvider providerMessage
      */
-    public function testPower($data, $response)
+    public function testParserMessage($Message, $response)
     {
-        $this->assertEquals($response, $this->fixture::parserMessage($data));
+        $this->assertEquals($response, $this->fixture::parserMessage($Message));
     }
 
-    public function providerPower()
+    public function providerMessage()
     {
         return [
             ['Пароль: 6968
